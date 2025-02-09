@@ -6,7 +6,7 @@ public class Board
 
     public Board(int numberOfMines)
     {
-        var minesPositions = RandomNumberGenerator.GenerateNumbers(numberOfMines, 1, 64);
+        var minesPositions = RandomNumberGenerator.GenerateNumbers(numberOfMines, 1, 63);
         Fields = Enumerable.Range(0, 64).Select(index =>
         {
             return new Field(minesPositions.Contains(index));
